@@ -102,9 +102,13 @@ ef          javascript:window.location='x-eaglefiler://import?url='+encodeURICom
 efo         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&askForOptions=1';     Archive in EagleFiler - Options
 efb         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webloc&title='+encodeURIComponent(document.title);     Archive bookmark in EagleFiler
 efbo        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webloc&title='+encodeURIComponent(document.title)+'&askForOptions=1';      Archive bookmark in EagleFilter - Options
-efp         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=pdfSinglePage';        Archive PDF in EagleFiler
-efpo        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=pdfSinglePage&askForOptions=1';        Archive PDF in EagleFiler - Options
-efa         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webarchive';       Archive webarchive in EagleFiler
-efao        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webarchive&askForOptions=1';       Archive webarchive in EagleFiler - Options
+efp         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=pdfSinglePage';        Archive as PDF in EagleFiler
+efpo        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=pdfSinglePage&askForOptions=1';        Archive as PDF in EagleFiler - Options
+efa         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webarchive';       Archive as webarchive in EagleFiler
+efao        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webarchive&askForOptions=1';       Archive as webarchive in EagleFiler - Options
 
-myquix      javascript:alert('myQuix%20version:v.2011.10.26-02:43');void(0)              Display my Quix settings version
+tog         javascript:location.href='x-together://AddItem?kind=WebArchive&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);       Archive in Together as webarchive
+togb        javascript:location.href='x-together://AddItem?kind=Bookmark&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);         Archive bookmark in Together
+togp        javascript:location.href='x-together://AddItem?kind=WebPDF&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);           Archive as PDF in Together
+
+myquix      javascript:alert('myQuix%20version:v.2011.10.27-04:46');void(0)              Display my Quix settings version
