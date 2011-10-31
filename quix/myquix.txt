@@ -53,7 +53,8 @@ i       javascript:function%20iprl5(){var%20d=document,z=d.createElement('scr'+'
 > Instapaper alternative http://instapaper.com/hello2?url='+encodeURIComponent(entry.attr('href'))+'&title='+encodeURIComponent(entry.text())
 
 tw          javascript:var%20d=document,w=window,f='http://twimblr.appspot.com/bm',l=d.location,e=encodeURIComponent,p='?v=1&u='+e(l.href)+'&t='+e(d.title),u=f+p,a=function(){if(!w.open(u,'Twimblr','toolbar=1,resizable=1,status=1,width=450,height=430'))l.href=u;};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();void(0)             Bookmark in Twimblr
-
+twlater     javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='http://twitlatr.appspot.com/',l=d.location,p='?v=1&u='+enc(l.href)+'&t='+enc(d.title)+'&s='+enc(s),u=f+p,a=function()%7Bif(!w.open(u))l.href=u;%7D;if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();void(0)        Schedule Tweet
+@@tlater    twlater
 
 twimblr         http://twimblr.appspot.com/         Go to Twimblr Toolkit
 pinreadr        http://pinreadr.appspot.com/        Go to Pinreadr
@@ -111,4 +112,4 @@ tog         javascript:location.href='x-together://AddItem?kind=WebArchive&name=
 togb        javascript:location.href='x-together://AddItem?kind=Bookmark&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);         Archive bookmark in Together
 togp        javascript:location.href='x-together://AddItem?kind=WebPDF&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);           Archive as PDF in Together
 
-myquix      javascript:alert('myQuix%20version:v.2011.10.27-04:46');void(0)              Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2011.10.31-12:45');void(0)              Display my Quix settings version
