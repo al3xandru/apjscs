@@ -27,8 +27,9 @@
 
 @Twitter commands
 ttm         twitter://post?message=%s%20%t%20%r         Tweet with Twitter for Mac
-tt         javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='https://twitter.com/share?',p='url='+enc(d.location.href)+'&text='+enc(d.title+':%20'+s)+'&_='+((new Date()).getTime()),u=f+p;if(!w.open(u))l.href=u;void(0)     Tweet with selection
+> tt         javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='https://twitter.com/share?',p='url='+enc(d.location.href)+'&text='+enc(d.title+':%20'+s)+'&_='+((new Date()).getTime()),u=f+p;if(!w.open(u))l.href=u;void(0)     Tweet with selection
 tto        javascript:(function(){window.twttr=window.twttr||{};var%20D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C&gt;A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/bookmarklets/share.js?v=1';F.getElementsByTagName('head')[0].appendChild(E)}());        Original Twitter bookmarklet
+@@TT       tn
 
 
 @Mobile bookmarks
@@ -115,4 +116,4 @@ tog         javascript:location.href='x-together://AddItem?kind=WebArchive&name=
 togb        javascript:location.href='x-together://AddItem?kind=Bookmark&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);         Archive bookmark in Together
 togp        javascript:location.href='x-together://AddItem?kind=WebPDF&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);           Archive as PDF in Together
 
-myquix      javascript:alert('myQuix%20version:v.2011.12.10-12:37');void(0)              Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2011.12.10-12:40');void(0)              Display my Quix settings version
