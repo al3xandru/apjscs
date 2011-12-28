@@ -103,6 +103,7 @@ omni        javascript:(function(){var%20enc=encodeURIComponent,w=window,frames=
 huffduff    javascript:var%20w=window.open('http://huffduffer.com/add?popup=true&page='+encodeURIComponent(location.href),'huffduff','scrollbars=1,status=0,resizable=1,location=0,toolbar=0,width=360,height=480');        http://huffduffer.com
 @@podcast   huffduff
 
+arx         javascript:(function(){var%20e=encodeURIComponent,w=window,d=document,l=w.location.href,t=d.title;if(l.indexOf("nosql.mypopescu.com")>0||l.indexOf("mynosql.tv")>0){var%20wl="myarx://l?lu="+e(l)+"&lt="+e(t),flinks=[],entry=d.getElementsByClassName("entry_body")[0],tagC=d.getElementsByClassName("tags")[0],lres=entry.getElementsByClassName("linksrc")[0],links=entry.getElementsByTagName("a"),tags=tagC.getElementsByTagName("a"),i;if(lres){flinks.push(lres.getElementsByTagName("a")[0].href)};for(i=0;i<links.length;i++){if(links[i].href&&links[i].href.indexOf("nosql.mypopescu.com")<0&&links[i].href.indexOf("mynosql.tv")<0)flinks.push(links[i].href)}if(flinks.length>0){for(i=0;i<flinks.length;i++){wl=wl+"&u="+e(flinks[i])}};for(i=0;i<tags.length;i++){wl=wl+"&lc="+e(tags[i].innerHTML)};window.console.log(wl);window.location.href=wl}else{window.location.href="myarx://n?t="+e(t)+"&u="+e(l)}})();       Archive for myNoSQL.tv
 ef          javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location);        Archive in EagleFiler
 efo         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&askForOptions=1';     Archive in EagleFiler - Options
 efb         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webloc&title='+encodeURIComponent(document.title);     Archive bookmark in EagleFiler
@@ -116,4 +117,4 @@ tog         javascript:location.href='x-together://AddItem?kind=WebArchive&name=
 togb        javascript:location.href='x-together://AddItem?kind=Bookmark&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);         Archive bookmark in Together
 togp        javascript:location.href='x-together://AddItem?kind=WebPDF&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);           Archive as PDF in Together
 
-myquix      javascript:alert('myQuix%20version:v.2011.12.10-12:40');void(0)              Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2011.12.28-17:10');void(0)              Display my Quix settings version
