@@ -5,116 +5,125 @@
 > Syntax: http://quixapp.com/syntax/
 >
 > Default commands: http://quixapp.com/quix.txt
+>
+> speed, gspeed, vs, xray 
 
 
 @Aliases
 @These are redefinitions of the default commands
-*           http://www.google.com/search?q=%s									Google Search
-@@amazon    a
-@@def       d
-@@email     e
-@@images    img
-@@site      gs
-@@wikipedia w
-@@tweet     tn
-@@twit      tn
-@@twitu     t
-@@twituser  t
-@@twits     s
-@@gcache    gc
-@@head      h
+*               http://www.google.com/search?q=%s							Google Search
+@@def           d
+@@email         e
+@@images        img
+@@lb            li
+@@y             yt
+@@headers       h
 
+tr              http://translate.google.com?sl=ro&tl=en&text=%s                     Translate with Google Translate
+trp             http://translate.google.com/translate?u=%r&tl=%s					Translate the current page
 
 @Twitter commands
-ttm         twitter://post?message=%s%20%t%20%r         Tweet with Twitter for Mac
-> tt         javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='https://twitter.com/share?',p='url='+enc(d.location.href)+'&text='+enc(d.title+':%20'+s)+'&_='+((new Date()).getTime()),u=f+p;if(!w.open(u))l.href=u;void(0)     Tweet with selection
-tto        javascript:(function(){window.twttr=window.twttr||{};var%20D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C&gt;A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/bookmarklets/share.js?v=1';F.getElementsByTagName('head')[0].appendChild(E)}());        Original Twitter bookmarklet
-@@TT       tn
+@@t             tn
+@@tu            s
+@@twits         s
+@@ts            s
+          
+tm              twitter://post?message=%s%20%t%20%r         Tweet with Twitter for Mac
+@@tweet         tn
+@@twit          tn
 
+tt              javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='https://twitter.com/share?',p='url='+enc(d.location.href)+'&text='+enc(d.title+':%20'+s)+'&_='+((new Date()).getTime()),u=f+p;if(!w.open(u))l.href=u;void(0)     Tweet with selection
+tto             javascript:(function(){window.twttr=window.twttr||{};var%20D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C&gt;A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/bookmarklets/share.js?v=1';F.getElementsByTagName('head')[0].appendChild(E)}());        Original Twitter bookmarklet
+
+tlater          javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='http://twitlatr.appspot.com/',l=d.location,p='?v=1&u='+enc(l.href)+'&t='+enc(d.title)+'&s='+enc(s),u=f+p,a=function(){if(!w.open(u))l.href=u};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();void(0)        Schedule Tweet
+@@tweetlater    tlater
+
+
+@iOS Twitter commands
+tta         javascript:window.location.href="tweetbot://al3xandru/post?text="+escape(document.title)+"%20"+encodeURI(window.location.href)                Tweet current page with Tweetbot
+ttb         javascript:window.location.href="tweetie:"+escape(document.title)+"%20"+encodeURI(window.location.href)                                       Tweet current page with Tweetie
 
 @Mobile bookmarks
-pwd        javascript:window.location.href="onepassword://"+encodeURI(window.location.href)         1Password
-tta        javascript:window.location.href="tweetbot://al3xandru/post?text="+escape(document.title)+"%20"+encodeURI(window.location.href)                Tweet current page with Tweetbot
-ttb        javascript:window.location.href="tweetie:"+escape(document.title)+"%20"+encodeURI(window.location.href)                                       Tweet current page with Tweetie
-yummy      javascript:window.location.href="yummy://post?url="+encodeURIComponent(window.location.href)+"&title="+encodeURIComponent(document.title)     Add bookmark to Yummy
+pwd         javascript:window.location.href="onepassword://"+encodeURI(window.location.href)            1Password
+yummy       javascript:window.location.href="yummy://post?url="+encodeURIComponent(window.location.href)+"&title="+encodeURIComponent(document.title)           Add bookmark to Yummy
 
+
+@Readability
+rj          javascript:(function(){var%20d=document,u='http://apjscs.googlecode.com/git/readability/',_rs=d.createElement('SCRIPT'),_rc=d.createElement('LINK');_rs.type='text/javascript';_rs.src=u+'r.js?x='+(Math.random());_rc.rel='stylesheet';_rc.href=u+'r.css';_rc.type='text/css';_rc.media='screen';readConvertLinksToFootnotes=true;readSize='size-medium';readMargin='margin-medium';readStyle='style-a';readFont="%s"||"Metrophobic";if(navigator.userAgent.match(/iphone|ipad|ipod|android/i)){readSize='size-large';readMargin='margin-narrow'};h=d.getElementsByTagName('head')[0];h.appendChild(_rs);h.appendChild(_rc);})();                My JS readability
+rr          javascript:((function(){window.baseUrl='https://www.readability.com';window.readabilityToken='';var%20s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('charset','UTF-8');s.setAttribute('src',baseUrl+'/bookmarklet/read.js');document.documentElement.appendChild(s);})())                          Readability.com
+r           http://ahrefs.appspot.com/r?u=%r&t=%t               My Readability.py
+ri          http://ahrefs.appspot.com/i?u=%r                    Cleaned instapaper readability 
+ir          http://www.instapaper.com/m?u=%r                    Instapaper readability
+mk          http://www.aaronsw.com/2002/html2text/?url=%r		Transform this page into Markdown
+@@mkd       mk
+@@markdown  mk
+> rd          http://ahrefs.appspot.com/r2?u=%r&t=%t              My Readability w/ Diffbot
+
+
+@Shortcuts
+twimblr     http://twimblr.appspot.com/         Go to Twimblr Toolkit
+pinr        http://pinreadr.appspot.com/        Go to Pinreadr
+myn         http://nosql.mypopescu.com/         Go to myNoSQL
+myj         http://jots.mypopescu.com/          Go to jots.mypopescu.com
+workflowy   http://www.workflowy.com/           Workflowy
+gr          http://www.google.com/reader        Go to Google Reader
+times       http://timdd.com                    International Time Zones
+
+
+@EagleFiler
+ef          javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location);                        Archive in EagleFiler
+efo         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&askForOptions=1';     Archive in EagleFiler - Options
+efb         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webloc&title='+encodeURIComponent(document.title);                         Archive bookmark in EagleFiler
+efbo        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webloc&title='+encodeURIComponent(document.title)+'&askForOptions=1';      Archive bookmark in EagleFilter - Options
+efp         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=pdfSinglePage';                        Archive as PDF in EagleFiler
+efpo        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=pdfSinglePage&askForOptions=1';        Archive as PDF in EagleFiler - Options
+efa         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webarchive';                           Archive as webarchive in EagleFiler
+efao        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webarchive&askForOptions=1';           Archive as webarchive in EagleFiler - Options
+
+@Together
+tog         javascript:location.href='x-together://AddItem?kind=WebArchive&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);       Archive as webarchive in Together
+togb        javascript:location.href='x-together://AddItem?kind=Bookmark&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);         Archive as bookmark in Together
+togp        javascript:location.href='x-together://AddItem?kind=WebPDF&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);           Archive as PDF in Together
 
 @My commands
+
 jmp         javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),s2=((s.toString()=='')?s:('%22'+enc(s)+'%22')),f='http://j.mp/',l=d.location,p='?v=3&u='+enc(l.href)%20+'&s='+enc(d.title)+'%20'+s2,u=f+p;try{if(!/^(.*\.)?tumblrzzz[^.]*$/.test(l.host))throw(0);tstbklt();}catch(z){a=function(){if(!w.open(u))l.href=u;};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();}void(0)          Shorted with j.mp
 
-pin         javascript:var%20e=encodeURIComponent,q=window.location.href,p=document.title;if(document.getSelection){d=document.getSelection();}else{d='';};if(!window.open('https://pinboard.in/add?showtags=yes&url='+e(q)+'&description='+e(d)+'&title='+e(p),'Pinboard','toolbar=no,width=700,height=750')){window.location.href='https://pinboard.in/add?showtags=yes&url='+e(q)+'&description='+e(d)+'&title='+e(p)}void(0)        Bookmark on Pinboard  
-
-> Pinboard alternative https://pinboard.in/add?showtags=yes&url=%r&description=%s&title=%t     Pinboard
+pin         javascript:var%20e=encodeURIComponent,q=window.location.href,p=document.title;if(document.getSelection){d=document.getSelection();}else{d='';},u='https://pinboard.in/add?showtags=yes&next=same&url='+e(q)+'&description='+e(d)+'&title='+e(p);if(!window.open(u,'Pinboard','toolbar=no,width=700,height=750')){window.location.href=u}void(0)        Bookmark on Pinboard  
 
 ril         javascript:(function(){ISRIL_H='a123';ISRIL_SCRIPT=document.createElement('SCRIPT');ISRIL_SCRIPT.type='text/javascript';ISRIL_SCRIPT.src='http://readitlaterlist.com/b/r.js';document.getElementsByTagName('head')[0].appendChild(ISRIL_SCRIPT)})();      Bookmark on ReadItLater
 
-> ReadItLater alternative  https://readitlaterlist.com/save?url=%r&title=%t http://readitlaterlist.com/edit/
-
-i       javascript:function%20iprl5(){var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);d.title='(Saving...)%20'+d.title;z.setAttribute('src','http://www.instapaper.com/j/ZG1C50lHfgb4?u='+encodeURIComponent(d.location.href)+'&t='+(new%20Date().getTime()));b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)        Bookmark on Instapaper
+i           javascript:function%20iprl5(){var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);d.title='(Saving...)%20'+d.title;z.setAttribute('src','http://www.instapaper.com/j/ZG1C50lHfgb4?u='+encodeURIComponent(d.location.href)+'&t='+(new%20Date().getTime()));b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)        Bookmark on Instapaper
 @@insta     i
 @@ins       i
 
-> Instapaper alternative http://instapaper.com/hello2?url='+encodeURIComponent(entry.attr('href'))+'&title='+encodeURIComponent(entry.text())
-
 tw          javascript:var%20d=document,w=window,f='http://twimblr.appspot.com/bm',l=d.location,e=encodeURIComponent,p='?v=1&u='+e(l.href)+'&t='+e(d.title),u=f+p,a=function(){if(!w.open(u,'Twimblr','toolbar=1,resizable=1,status=1,width=450,height=430'))l.href=u;};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();void(0)             Bookmark in Twimblr
-twlater     javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='http://twitlatr.appspot.com/',l=d.location,p='?v=1&u='+enc(l.href)+'&t='+enc(d.title)+'&s='+enc(s),u=f+p,a=function(){if(!w.open(u))l.href=u};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();void(0)        Schedule Tweet
-@@tlater    twlater
 
-twimblr         http://twimblr.appspot.com/         Go to Twimblr Toolkit
-pinreadr        http://pinreadr.appspot.com/        Go to Pinreadr
-@@pinread       pinreadr
-@@pinr          pinreadr
-
-nosql           http://nosql.mypopescu.com/         Go to myNoSQL
-jots            http://jots.mypopescu.com/          Go to jots.mypopescu.com
-
-workflowy       http://www.workflowy.com/           Workflowy
-
-gr              http://www.google.com/reader        Go to Google Reader
-localtime       http://timdd.com                    International Time Zones
-
-
-r           javascript:(function(){var%20d=document,u='http://apjscs.googlecode.com/git/readability/',_rs=d.createElement('SCRIPT'),_rc=d.createElement('LINK');_rs.type='text/javascript';_rs.src=u+'r.js?x='+(Math.random());_rc.rel='stylesheet';_rc.href=u+'r.css';_rc.type='text/css';_rc.media='screen';readConvertLinksToFootnotes=true;readSize='size-medium';readMargin='margin-medium';readStyle='style-a';readFont="%s"||"Metrophobic";if(navigator.userAgent.match(/iphone|ipad|ipod|android/i)){readSize='size-large';readMargin='margin-narrow'};h=d.getElementsByTagName('head')[0];h.appendChild(_rs);h.appendChild(_rc);})();                My JS readability
-ro          javascript:((function(){window.baseUrl='https://www.readability.com';window.readabilityToken='';var%20s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('charset','UTF-8');s.setAttribute('src',baseUrl+'/bookmarklet/read.js');document.documentElement.appendChild(s);})())                          Readability.com
-rr          http://ahrefs.appspot.com/r?u=%r&t=%t               My Readability.py
-rio         http://www.instapaper.com/m?u=%r                    Instapaper readability
-ri          http://ahrefs.appspot.com/i?u=%r                    Cleaned instapaper readability 
-rd          http://ahrefs.appspot.com/r2?u=%r&t=%t              My Readability w/ Diffbot
-
-spreed              javascript:var%20w=window,d=document,sel=w.getSelection?w.getSelection():d.getSelection?d.getSelection():d.selection.createRange().text;sel=encodeURIComponent(""+sel);sel=sel.replace(/'/g,"_*_").replace(/%20/g,"+");var%20newd=w.document,zrfrm=newd.createElement('FORM'),frminput=newd.createElement('INPUT');zrfrm.action='http://www.spreeder.com/app.php';zrfrm.method='POST';frminput.type='hidden';frminput.name='passage';frminput.value=sel;zrfrm.appendChild(frminput);newd.body.appendChild(zrfrm);zrfrm.submit();                                                                    Spreed! http://www.spreeder.com/
-
-
-markd       http://www.aaronsw.com/2002/html2text/?url=%r		Transform this page into Markdown
-@@mkd       markd
-@@markdown  markd
+spreed      javascript:var%20w=window,d=document,sel=w.getSelection?w.getSelection():d.getSelection?d.getSelection():d.selection.createRange().text;sel=encodeURIComponent(""+sel);sel=sel.replace(/'/g,"_*_").replace(/%20/g,"+");var%20newd=w.document,zrfrm=newd.createElement('FORM'),frminput=newd.createElement('INPUT');zrfrm.action='http://www.spreeder.com/app.php';zrfrm.method='POST';frminput.type='hidden';frminput.name='passage';frminput.value=sel;zrfrm.appendChild(frminput);newd.body.appendChild(zrfrm);zrfrm.submit();        <a href="http://www.spreeder.com/">Spreed!</a>
 
 ccopy       javascript:(function(){var%20w=window,d=document,dec=decodeURIComponent,pageSelectedTxt=w.getSelection?w.getSelection():(d.getSelection)?d.getSelection():(d.selection?d.selection.createRange().text:0),nl=dec("%0A"),rl=dec("%0D"),pageTitle=d.title.replace(/nl|rl/g,"%20"),pageUri=w.location.href,cpTxt=pageUri+nl+pageTitle+nl+pageSelectedTxt;prompt("Copy%20selection",cpTxt);})();              Smart copy to clipboard (JS only)
 @@cc        ccopy
-fcopy       javascript:(function(){var%20scr=document.createElement("SCR"+"IPT"),dec=decodeURIComponent,nl=dec("%0A");scr.type="text/javascript";scr.src="http://friendfeedredux.appspot.com/cc/ZeroClipboard.js";scr.onload=function(){ZeroClipboard.setMoviePath("http://friendfeedredux.appspot.com/cc/ZeroClipboard.swf");var%20clip=new%20ZeroClipboard.Client(),pageSelectedTxt=window.getSelection?window.getSelection():(document.getSelection)?document.getSelection():(document.selection?document.selection.createRange().text:0),pageTitle=document.title,pageUri=window.location.href,cpTxt="",topd=document.createElement('DIV');topd.id="_zeroclipboard_btn";topd.style.cssText="position:fixed;top:0;left:0;z-index:10000;width:80px;height:60px;background-color:#FFF;color:#333;padding-top:20px;text-align:center;border:1px%20solid%20#f0f0f0;border-bottom:2px%20solid%20#ccc;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;";topd.innerHTML="Click<br/>to%20copy%20to<br/>clipboard";document.body.appendChild(topd);clip.setHandCursor(true);document.body.id=document.body.id||"_zeroclipboard_all";clip.glue(document.body.id,"_zeroclipboard_btn");cpTxt="title:"+pageTitle+"%20%20"+nl;cpTxt=cpTxt+"link:"+pageUri+"%20%20"+nl+nl+pageSelectedTxt;clip.setText(cpTxt);clip.addEventListener("onComplete",function(client,text){document.getElementById("_zeroclipboard_btn").innerHTML="Copied<br/>to<br/>clipboard";});};document.body.appendChild(scr);})();                                            Smart copy to clipboard (Flash-based)
 
-
-nvalt       javascript:(function(){var%20dec=decodeURIComponent,w=window,d=document,pageSelectedTxt=w.getSelection?w.getSelection():(d.getSelection?d.getSelection():(d.selection?d.selection.createRange().text:0)),pageTitle=d.title,pageUri=w.location.href,tmplt="",dt=new%20Date(),blog,ft,ismobile=navigator.userAgent.match(/ipad|iphone/i),sp="%20%20%20",nl=dec("%0A"),rl=dec("%0D"),nll=(ismobile?rl+nl:nl);if(pageSelectedTxt!=""){blog=prompt("Blog[jots,nosql,'']%20(add%20u%20for%20unformatted):","jots");if(!blog.match(/u$/)){pageSelectedTxt=">%20"+pageSelectedTxt;pageSelectedTxt=pageSelectedTxt.replace(/(nll|nl|rl)/gm,nl).replace(/nl/g,nl+">%20"+nl+"%20")};if(blog.match(/^(jots|nosql)/)){tmplt="---"+nll;tmplt+="title:"+pageTitle+sp+nll;tmplt+="tags:"+sp+nl;tmplt+="link:"+pageUri+sp+nll;tmplt+="state:published"+sp+"draft"+sp+"queue"+sp+nll;tmplt+="pubdate:"+dt.getFullYear()+"-"+(1+dt.getMonth())+"-"+dt.getDate()+sp+nll;tmplt+="blog:"+blog+sp+nll;tmplt+="id:"+sp+nll+nll+"---"+nll+nll;};tmplt+="["+pageTitle+"]("+pageUri+")"+nll+nll;if(ismobile){prompt("Copy:",tmplt+pageSelectedTxt)}else{w.location.href="nvalt://make/?txt="+encodeURIComponent(tmplt+pageSelectedTxt)+"&title="+encodeURIComponent(pageTitle)}}else{if(ismobile){prompt("Copy:","["+pageTitle+"]("+pageUri+")")}else{ft=prompt("Type?%20(t,i,p)","t");if(ft=="p"){w.location.href="nvalt://make/?url="+encodeURIComponent(pageUri)+"&title="+encodeURIComponent(pageTitle)}else%20if(ft=="i"){pageUri="http://ahrefs.appspot.com/i?fn&u="+encodeURIComponent(pageUri);w.location.href="nvalt://make/?url="+encodeURIComponent(pageUri)+"&title="+encodeURIComponent(pageTitle)}else{w.location.href="nvalt://make/?txt="+encodeURIComponent("["+pageTitle+"]("+pageUri+")")+"&title="+encodeURIComponent(pageTitle)}}}})();            Create nvALT note from page or selection
+nvalt       javascript:(function(){var%20w=window,d=document,pageSelectedTxt=w.getSelection?w.getSelection():(d.getSelection?d.getSelection():(d.selection?d.selection.createRange().text:0)),pageTitle=d.title,pageUri=w.location.href,tmplt="",dt=new%20Date(),blog,ft,ismobile=navigator.userAgent.match(/ipad|iphone/i),sp="%20%20%20",nl=(ismobile?"%5Cr%5Cn":"%5Cn"),dec=decodeURIComponent,enc=encodeURIComponent;if(pageSelectedTxt!=""){blog=prompt("Blog(jots,nosql,'')%20(add%20u%20for%20unformatted):","jots");if(!blog.match(/u$/)){pageSelectedTxt="%3E%20"+pageSelectedTxt;pageSelectedTxt=pageSelectedTxt.replace(/(%5Cr%5Cn%7C%5Cn+%7C%5Cr)/gm,"%5Cn").replace(/%5Cn/g,"%5Cn>%20%5Cn>%20")};if(blog.match(/^(jots|nosql)/)){tmplt="---"+nl+"title:"+pageTitle+sp+nl+"tags:"+sp+nl+"link:"+pageUri+sp+nl+"state:published"+sp+"draft"+sp+"queue"+sp+nl+"pubdate:"+dt.getFullYear()+"-"+(1+dt.getMonth())+"-"+dt.getDate()+sp+nl+"blog:"+blog+sp+nl+"id:"+sp+nl+nl+"---"+nl+nl;};tmplt+="%5B"+pageTitle+"%5D("+pageUri+")%5Cn%5Cn";if(ismobile){prompt("Copy:",tmplt+pageSelectedTxt)}else{w.location.href="nvalt://make/?txt="+encodeURIComponent(tmplt+pageSelectedTxt)+"&title="+encodeURIComponent(pageTitle)}}else{if(ismobile){prompt("Copy:","%5B"+pageTitle+"%5D("+pageUri+")")}else{ft=prompt("Type?%20(t,i,p)","t");if(ft=="p"){w.location.href="nvalt://make/?url="+enc(pageUri)+"&title="+enc(pageTitle)}else%20if(ft=="i"){pageUri="http://ahrefs.appspot.com/i?fn&u="+enc(pageUri);w.location.href="nvalt://make/?url="+enc(pageUri)+"&title="+enc(pageTitle)}else{w.location.href="nvalt://make/?txt="+enc("%5B"+pageTitle+"%5D("+pageUri+")")+"&title="+enc(pageTitle)}}}})();            Create nvALT note from page or selection
 
 slides      javascript:(function(){if(!slideshare_object)%20return;var%20d=decodeURIComponent,l=d("%3C"),g=d("%3E"),o=l+"div%20class='embedded'%20style='width:425px'%20id='__ss_"+slideshare_object.presentationId+"'"+g+l+"iframe%20src='"+slideshare_object.slideshow.iframe_url+"?rel=0'%20width='425'%20height='355'%20frameborder='0'%20marginwidth='0'%20marginheight='0'%20scrolling='no'"+g+l+"/iframe"+g+l+"div%20style='padding-top:5px;padding-bottom:12px'"+g+l+"a%20href='"+window.location.href+"'%20rel='nofollow%20external'"+g+slideshare_object.slideshow.title+l+"/a"+g+"%20from%20"+l+"a%20href='http://www.slideshare.net/"+slideshare_object.slideshow.user_login+"'%20rel='nofollow%20external'"+g+slideshare_object.slideshow.user_name+l+"/a"+g+l+"/div"+g+l+"/div"+g;prompt("Code:",o);})();                     Embeddable Slideshare Slides
 
 omni        javascript:(function(){var%20enc=encodeURIComponent,dec=decodeURIComponent,nl=dec("%0A"),w=window,frames=w.frames,d=document,tn=w.getSelection?w.getSelection():(d.getSelection)?d.getSelection():(d.selection?d.selection.createRange().text:0),pu=w.location.href,isGMail=w.location.host.match(/mail\.google\.com/),tt=pt=d.title,gmsgFrm=d.getElementById("canvas_frame"),subjSpans,i,url;if(tn==""){for(i=0;i<frames.length&&tn=="";i++){if(frames[i].document!=undefined)tn=frames[i].document.getSelection().toString();}}if(isGMail){if(gmsgFrm){subjSpans=gmsgFrm.contentDocument.getElementsByClassName("hP");if(subjSpans)tt=subjSpans[0].innerText;};if(!subjSpans){tt=d.title.substring(d.title.indexOf("-")+1,d.title.lastIndexOf("-")).replace(/^%20+/,"").replace(/%20+$/,"")};if(tn!="")tn+=nl+nl;tn+="From%20email%20subject:("+tt+")"+nl+pu;pu="https://mail.google.com/mail/u/0/?qs=true&search=query&q=subject:("+enc(tt)+")"};url='omnifocus:///add?note='+enc(tn+nl+pu)+'&name='+enc(tt);w.location.href=url})();           OmniFocus
 @@todo      omni
 
+arx         javascript:(function(){var%20e=encodeURIComponent,w=window,d=document,l=w.location.href,t=d.title;if(l.indexOf("nosql.mypopescu.com")>0||l.indexOf("mynosql.tv")>0){var%20wl="myarx://l?lu="+e(l)+"&lt="+e(t),flinks=[],entry=d.getElementsByClassName("entry_body")[0],tagC=d.getElementsByClassName("tags")[0],lres=entry.getElementsByClassName("linksrc")[0],links=entry.getElementsByTagName("a"),tags=tagC.getElementsByTagName("a"),i;if(lres){flinks.push(lres.getElementsByTagName("a")[0].href)};for(i=0;i<links.length;i++){if(links[i].href&&links[i].href.indexOf("nosql.mypopescu.com")<0&&links[i].href.indexOf("mynosql.tv")<0)flinks.push(links[i].href)}if(flinks.length>0){for(i=0;i<flinks.length;i++){wl=wl+"&u="+e(flinks[i])}};for(i=0;i<tags.length;i++){wl=wl+"&lc="+e(tags[i].innerHTML)};window.console.log(wl);window.location.href=wl}else{window.location.href="myarx://n?t="+e(t)+"&u="+e(l)}})();       Archive for myNoSQL.tv
+
 huffduff    javascript:var%20w=window.open('http://huffduffer.com/add?popup=true&page='+encodeURIComponent(location.href),'huffduff','scrollbars=1,status=0,resizable=1,location=0,toolbar=0,width=360,height=480');        http://huffduffer.com
 @@podcast   huffduff
 
-arx         javascript:(function(){var%20e=encodeURIComponent,w=window,d=document,l=w.location.href,t=d.title;if(l.indexOf("nosql.mypopescu.com")>0||l.indexOf("mynosql.tv")>0){var%20wl="myarx://l?lu="+e(l)+"&lt="+e(t),flinks=[],entry=d.getElementsByClassName("entry_body")[0],tagC=d.getElementsByClassName("tags")[0],lres=entry.getElementsByClassName("linksrc")[0],links=entry.getElementsByTagName("a"),tags=tagC.getElementsByTagName("a"),i;if(lres){flinks.push(lres.getElementsByTagName("a")[0].href)};for(i=0;i<links.length;i++){if(links[i].href&&links[i].href.indexOf("nosql.mypopescu.com")<0&&links[i].href.indexOf("mynosql.tv")<0)flinks.push(links[i].href)}if(flinks.length>0){for(i=0;i<flinks.length;i++){wl=wl+"&u="+e(flinks[i])}};for(i=0;i<tags.length;i++){wl=wl+"&lc="+e(tags[i].innerHTML)};window.console.log(wl);window.location.href=wl}else{window.location.href="myarx://n?t="+e(t)+"&u="+e(l)}})();       Archive for myNoSQL.tv
-ef          javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location);        Archive in EagleFiler
-efo         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&askForOptions=1';     Archive in EagleFiler - Options
-efb         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webloc&title='+encodeURIComponent(document.title);     Archive bookmark in EagleFiler
-efbo        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webloc&title='+encodeURIComponent(document.title)+'&askForOptions=1';      Archive bookmark in EagleFilter - Options
-efp         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=pdfSinglePage';        Archive as PDF in EagleFiler
-efpo        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=pdfSinglePage&askForOptions=1';        Archive as PDF in EagleFiler - Options
-efa         javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webarchive';       Archive as webarchive in EagleFiler
-efao        javascript:window.location='x-eaglefiler://import?url='+encodeURIComponent(window.location)+'&format=webarchive&askForOptions=1';       Archive as webarchive in EagleFiler - Options
 
-tog         javascript:location.href='x-together://AddItem?kind=WebArchive&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);       Archive in Together as webarchive
-togb        javascript:location.href='x-together://AddItem?kind=Bookmark&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);         Archive bookmark in Together
-togp        javascript:location.href='x-together://AddItem?kind=WebPDF&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);           Archive as PDF in Together
+myquix      javascript:alert('myQuix%20version:v.2012.01.08-02:15');void(0)              Display my Quix settings version
 
-myquix      javascript:alert('myQuix%20version:v.2012.01.07-16:15');void(0)              Display my Quix settings version
+@Alternative commands
+> ReadItLater alternative  https://readitlaterlist.com/save?url=%r&title=%t http://readitlaterlist.com/edit/
+
+> http://instapaper.com/hello2?url='+encodeURIComponent(entry.attr('href'))+'&title='+encodeURIComponent(entry.text())
+> fcopy       javascript:(function(){var%20scr=document.createElement("SCR"+"IPT"),dec=decodeURIComponent,nl=dec("%0A");scr.type="text/javascript";scr.src="http://friendfeedredux.appspot.com/cc/ZeroClipboard.js";scr.onload=function(){ZeroClipboard.setMoviePath("http://friendfeedredux.appspot.com/cc/ZeroClipboard.swf");var%20clip=new%20ZeroClipboard.Client(),pageSelectedTxt=window.getSelection?window.getSelection():(document.getSelection)?document.getSelection():(document.selection?document.selection.createRange().text:0),pageTitle=document.title,pageUri=window.location.href,cpTxt="",topd=document.createElement('DIV');topd.id="_zeroclipboard_btn";topd.style.cssText="position:fixed;top:0;left:0;z-index:10000;width:80px;height:60px;background-color:#FFF;color:#333;padding-top:20px;text-align:center;border:1px%20solid%20#f0f0f0;border-bottom:2px%20solid%20#ccc;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;";topd.innerHTML="Click<br/>to%20copy%20to<br/>clipboard";document.body.appendChild(topd);clip.setHandCursor(true);document.body.id=document.body.id||"_zeroclipboard_all";clip.glue(document.body.id,"_zeroclipboard_btn");cpTxt="title:"+pageTitle+"%20%20"+nl;cpTxt=cpTxt+"link:"+pageUri+"%20%20"+nl+nl+pageSelectedTxt;clip.setText(cpTxt);clip.addEventListener("onComplete",function(client,text){document.getElementById("_zeroclipboard_btn").innerHTML="Copied<br/>to<br/>clipboard";});};document.body.appendChild(scr);})();                                            Smart copy to clipboard (Flash-based)
+
+
+
