@@ -92,7 +92,7 @@ togp        javascript:location.href='x-together://AddItem?kind=WebPDF&name='+en
 
 jmp         javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),s2=((s.toString()=='')?s:('%22'+enc(s)+'%22')),f='http://j.mp/',l=d.location,p='?v=3&u='+enc(l.href)%20+'&s='+enc(d.title)+'%20'+s2,u=f+p;try{if(!/^(.*\.)?tumblrzzz[^.]*$/.test(l.host))throw(0);tstbklt();}catch(z){a=function(){if(!w.open(u))l.href=u;};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();}void(0)          Shorted with j.mp
 
-pin         javascript:var%20e=encodeURIComponent,q=window.location.href,p=document.title;if(document.getSelection){d=document.getSelection();}else{d='';},u='https://pinboard.in/add?showtags=yes&next=same&url='+e(q)+'&description='+e(d)+'&title='+e(p);if(!window.open(u,'Pinboard','toolbar=no,width=700,height=750')){window.location.href=u}void(0)        Bookmark on Pinboard  
+pin         javascript:var%20enc=encodeURIComponent,w=window,d=document,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),q=w.location.href,p=d.title,u='https://pinboard.in/add?showtags=yes&next=same&url='+enc(q)+'&description='+enc(s)+'&title='+enc(p);if(!w.open(u,'Pinboard','toolbar=no,width=700,height=750')){w.location.href=u}void(0)        Bookmark on Pinboard  
 
 ril         javascript:(function(){ISRIL_H='a123';ISRIL_SCRIPT=document.createElement('SCRIPT');ISRIL_SCRIPT.type='text/javascript';ISRIL_SCRIPT.src='http://readitlaterlist.com/b/r.js';document.getElementsByTagName('head')[0].appendChild(ISRIL_SCRIPT)})();      Bookmark on ReadItLater
 
@@ -120,7 +120,7 @@ huffduff    javascript:var%20w=window.open('http://huffduffer.com/add?popup=true
 @@podcast   huffduff
 
 
-myquix      javascript:alert('myQuix%20version:v.2012.01.08-03:15');void(0)              Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2012.01.08-03:45');void(0)              Display my Quix settings version
 
 @Alternative commands
 > ReadItLater alternative  https://readitlaterlist.com/save?url=%r&title=%t http://readitlaterlist.com/edit/
