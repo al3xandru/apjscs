@@ -19,21 +19,22 @@
 @@y             yt
 @@headers       h
 
+dict            http://dictionary.reference.com/browse/%s                           Dictionary.com
 tr              http://translate.google.com?sl=ro&tl=en&text=%s                     Translate with Google Translate
 trp             http://translate.google.com/translate?u=%r&tl=%s					Translate the current page
 
 @Twitter commands
-@@t             tn
-@@tu            t
 @@twits         s
 @@ts            s
-          
+t               javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='https://twitter.com/share?',p='url='+enc(d.location.href)+'&text='+enc(d.title+':%20'+s)+'&_='+((new Date()).getTime()),u=f+p;if(!w.open(u))l.href=u;void(0)     Tweet with selection
+tt              javascript:(function(){window.twttr=window.twttr||{};var%20D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C&gt;A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/bookmarklets/share.js?v=1';F.getElementsByTagName('head')[0].appendChild(E)}());        Original Twitter bookmarklet
+tf              https://twitter.com/#!/favorites            Twitter favorites
+tl              https://twitter.com/#!/al3xandru/%s         Twitter list
 tm              twitter://post?message=%s%20%t%20%r         Tweet with Twitter for Mac
-@@tweet         tn
-@@twit          tn
+tu              http://twitter.com/%s                       Twitter user
 
-tt              javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='https://twitter.com/share?',p='url='+enc(d.location.href)+'&text='+enc(d.title+':%20'+s)+'&_='+((new Date()).getTime()),u=f+p;if(!w.open(u))l.href=u;void(0)     Tweet with selection
-tto             javascript:(function(){window.twttr=window.twttr||{};var%20D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C&gt;A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/bookmarklets/share.js?v=1';F.getElementsByTagName('head')[0].appendChild(E)}());        Original Twitter bookmarklet
+@@tweet         t
+@@twit          t
 
 tlater          javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='http://twitlatr.appspot.com/',l=d.location,p='?v=1&u='+enc(l.href)+'&t='+enc(d.title)+'&s='+enc(s),u=f+p,a=function(){if(!w.open(u))l.href=u};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();void(0)        Schedule Tweet
 @@tweetlater    tlater
@@ -62,12 +63,13 @@ mk          http://www.aaronsw.com/2002/html2text/?url=%r		Transform this page i
 
 @Shortcuts
 twimblr     http://twimblr.appspot.com/         Go to Twimblr Toolkit
-pinr        http://pinreadr.appspot.com/        Go to Pinreadr
 myn         http://nosql.mypopescu.com/         Go to myNoSQL
 myj         http://jots.mypopescu.com/          Go to jots.mypopescu.com
-workflowy   http://www.workflowy.com/           Workflowy
+pinr        http://pinreadr.appspot.com/        Go to Pinreadr
+@@myp       pinr
 gr          http://www.google.com/reader        Go to Google Reader
 times       http://timdd.com                    International Time Zones
+workflowy   http://www.workflowy.com/           Workflowy
 
 
 @EagleFiler
@@ -117,7 +119,7 @@ huffduff    javascript:var%20w=window.open('http://huffduffer.com/add?popup=true
 @@podcast   huffduff
 
 
-myquix      javascript:alert('myQuix%20version:v.2012.01.08-02:22');void(0)              Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2012.01.08-02:50');void(0)              Display my Quix settings version
 
 @Alternative commands
 > ReadItLater alternative  https://readitlaterlist.com/save?url=%r&title=%t http://readitlaterlist.com/edit/
