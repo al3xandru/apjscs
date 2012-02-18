@@ -58,6 +58,8 @@ ri          http://ahrefs.appspot.com/i?u=%r                    Cleaned instapap
 ir          http://www.instapaper.com/m?u=%r                    Instapaper readability
 h2m         http://twimblr.appspot.com/h2m?u=%r&t=%t            html2markdown
 markdown    http://www.aaronsw.com/2002/html2text/?url=%r		Transform this page into Markdown
+@@md        h2m
+@@mk        h2m
 @@mkd       h2m
 @@mkdn      h2m
 print       javascript:(function(){if(window['ppw']&&ppw['bookmarklet']){ppw.bookmarklet.toggle();}else{window._pwyl_home='http://www.printwhatyoulike.com/';window._pwyl_pro_id=12942;window._pwyl_bmkl=document.createElement('script');window._pwyl_bmkl.setAttribute('type','text/javascript');window._pwyl_bmkl.setAttribute('src',window._pwyl_home+'static/compressed/pwyl_bookmarklet_10.js');window._pwyl_bmkl.setAttribute('pwyl','true');document.getElementsByTagName('head')[0].appendChild(window._pwyl_bmkl);}})();      Print with <a href="http://www.printwhatyoulike.com/">PrintWhatYouLike</a>
@@ -119,7 +121,7 @@ huffduff    javascript:var%20w=window.open('http://huffduffer.com/add?popup=true
 
 ba          javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f="x-brainarch://url?",p="u="+enc(w.location.href)+"&t="+enc(d.title)+"&s="+enc(s),u=f+p;if(!w.open(u))l.href=u;void(0)      Save page to BrainArch
 
-myquix      javascript:alert('myQuix%20version:v.2012.02.18-23:30');void(0)              Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2012.02.19-00:40');void(0)              Display my Quix settings version
 
 bal         javascript:(function(){var%20e=encodeURIComponent,w=window,d=document,l=w.location.href,t=d.title,wl="x-brainarch://links?u="+e(l)+"&t="+e(t),body,links,i;if(l.indexOf("nosql.mypopescu.com")>0||l.indexOf("mynosql.tv")>0){var%20lres=entry.getElementsByClassName("linksrc");if(lres.length>0){wl=wl+"&l="+e(lres[0].getElementsByTagName("a")[0].href)};body=d.getElementsByClassName("entry_body")[0]}else{body=d.body};links=body.getElementsByTagName("a");for(i=0;i<links.length;i++){if(links[i].href)wl=wl+"&l="+e(links[i].href)};try{window.console.log(wl);}catch(e){};if(!w.open(wl))window.location.href=wl})();        Save links from page to BrainArch
 
