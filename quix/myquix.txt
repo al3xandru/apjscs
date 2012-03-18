@@ -52,7 +52,8 @@ yummy       javascript:window.location.href="yummy://post?url="+encodeURICompone
 
 @Readability
 rj          javascript:(function(){var%20d=document,u='http://apjscs.googlecode.com/git/readability/',_rs=d.createElement('SCRIPT'),_rc=d.createElement('LINK');_rs.type='text/javascript';_rs.src=u+'r.js?x='+(Math.random());_rc.rel='stylesheet';_rc.href=u+'r.css';_rc.type='text/css';_rc.media='screen';readConvertLinksToFootnotes=true;readSize='size-medium';readMargin='margin-medium';readStyle='style-a';readFont="%s"||"Metrophobic";if(navigator.userAgent.match(/iphone|ipad|ipod|android/i)){readSize='size-large';readMargin='margin-narrow'};h=d.getElementsByTagName('head')[0];h.appendChild(_rs);h.appendChild(_rc);})();                My JS readability
-rr          javascript:((function(){window.baseUrl='https://www.readability.com';window.readabilityToken='';var%20s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('charset','UTF-8');s.setAttribute('src',baseUrl+'/bookmarklet/read.js');document.documentElement.appendChild(s);})())                          Readability.com
+rr          javascript:((function(){window.baseUrl='http://www.readability.com';window.readabilityToken='DRFjQrS3JxY239a87Be7rHD2BbfjWbWmErujqzrd';var%20s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('charset','UTF-8');s.setAttribute('src',baseUrl+'/bookmarklet/read.js');document.documentElement.appendChild(s);})())                          Readability.com
+@@rread     rr
 r           http://ahrefs.appspot.com/r?u=%r&t=%t               My Readability.py
 ri          http://ahrefs.appspot.com/i?u=%r                    Cleaned instapaper readability 
 ir          http://www.instapaper.com/m?u=%r                    Instapaper readability
@@ -104,6 +105,10 @@ i           javascript:function%20iprl5(){var%20d=document,z=d.createElement('sc
 @@insta     i
 @@ins       i
 
+readlater   javascript:((function(){window.baseUrl='http://www.readability.com';window.readabilityToken='DRFjQrS3JxY239a87Be7rHD2BbfjWbWmErujqzrd';var%20s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('charset','UTF-8');s.setAttribute('src',baseUrl+'/bookmarklet/save.js');document.documentElement.appendChild(s);})())       Bookmark on Readability.com
+@@rs        readlater
+@@rsave     readlater
+
 tw          javascript:var%20d=document,w=window,f='http://twimblr.appspot.com/bm',l=d.location,e=encodeURIComponent,p='?v=1&u='+e(l.href)+'&t='+e(d.title),u=f+p,a=function(){if(!w.open(u,'Twimblr','toolbar=1,resizable=1,status=1,width=450,height=430'))l.href=u;};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();void(0)             Bookmark in Twimblr
 
 spreed      javascript:var%20w=window,d=document,sel=w.getSelection?w.getSelection():d.getSelection?d.getSelection():d.selection.createRange().text;sel=encodeURIComponent(""+sel);sel=sel.replace(/'/g,"_*_").replace(/%20/g,"+");var%20newd=w.document,zrfrm=newd.createElement('FORM'),frminput=newd.createElement('INPUT');zrfrm.action='http://www.spreeder.com/app.php';zrfrm.method='POST';frminput.type='hidden';frminput.name='passage';frminput.value=sel;zrfrm.appendChild(frminput);newd.body.appendChild(zrfrm);zrfrm.submit();        <a href="http://www.spreeder.com/">Spreed!</a>
@@ -121,7 +126,7 @@ huffduff    javascript:var%20w=window.open('http://huffduffer.com/add?popup=true
 
 ba          javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f="x-brainarch://url?",p="u="+enc(w.location.href)+"&t="+enc(d.title)+"&s="+enc(s),u=f+p;if(!w.open(u))l.href=u;void(0)      Save page to BrainArch
 
-myquix      javascript:alert('myQuix%20version:v.2012.02.19-00:40');void(0)              Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2012.03.18-10:25');void(0)              Display my Quix settings version
 
 bal         javascript:(function(){var%20e=encodeURIComponent,w=window,d=document,l=w.location.href,t=d.title,wl="x-brainarch://links?u="+e(l)+"&t="+e(t),body,links,i;if(l.indexOf("nosql.mypopescu.com")>0||l.indexOf("mynosql.tv")>0){var%20lres=entry.getElementsByClassName("linksrc");if(lres.length>0){wl=wl+"&l="+e(lres[0].getElementsByTagName("a")[0].href)};body=d.getElementsByClassName("entry_body")[0]}else{body=d.body};links=body.getElementsByTagName("a");for(i=0;i<links.length;i++){if(links[i].href)wl=wl+"&l="+e(links[i].href)};try{window.console.log(wl);}catch(e){};if(!w.open(wl))window.location.href=wl})();        Save links from page to BrainArch
 
