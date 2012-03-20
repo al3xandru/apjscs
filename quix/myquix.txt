@@ -104,6 +104,7 @@ ril         javascript:(function(){ISRIL_H='a123';ISRIL_SCRIPT=document.createEl
 i           javascript:function%20iprl5(){var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);d.title='(Saving...)%20'+d.title;z.setAttribute('src','http://www.instapaper.com/j/ZG1C50lHfgb4?u='+encodeURIComponent(d.location.href)+'&t='+(new%20Date().getTime()));b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)        Bookmark on Instapaper
 @@insta     i
 @@ins       i
+iv          javascript:function%20iprl5(){var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body,l=d.location;try{if(!b)throw(0);d.title='(Saving...)%20'+d.title;z.setAttribute('src',l.protocol+'//www.instapaper.com/j/ZG1C50lHfgb4?f=1571513&u='+encodeURIComponent(l.href)+'&t='+(new%20Date().getTime()));b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)      Bookmark video to Instapaper
 
 readlater   javascript:((function(){window.baseUrl='http://www.readability.com';window.readabilityToken='DRFjQrS3JxY239a87Be7rHD2BbfjWbWmErujqzrd';var%20s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('charset','UTF-8');s.setAttribute('src',baseUrl+'/bookmarklet/save.js');document.documentElement.appendChild(s);})())       Bookmark on Readability.com
 @@rs        readlater
@@ -133,7 +134,7 @@ boxee       javascript:var%20b=document.body;if(b&&!document.xmlVersion){void(z=
 
 ba          javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f="x-brainarch://url?",p="u="+enc(w.location.href)+"&t="+enc(d.title)+"&s="+enc(s),u=f+p;if(!w.open(u))l.href=u;void(0)      Save page to BrainArch
 baz         javascript:var%20enc=encodeURIComponent,w=window,d=document,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),q=w.location.href,p=d.title,u='http://friendfeedredux.appspot.com/ba/brainarch.html?u='+enc(q)+'&d='+enc(s)+'&t='+enc(p);if(!w.open(u,'BrainArch','toolbar=no,width=700,height=960')){w.location.href=u}void(0)        Add to BrainArch
-myquix      javascript:alert('myQuix%20version:v.2012.03.18-22:43');void(0)              Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2012.03.20-11:33');void(0)              Display my Quix settings version
 
 bal         javascript:(function(){var%20e=encodeURIComponent,w=window,d=document,l=w.location.href,t=d.title,wl="x-brainarch://links?u="+e(l)+"&t="+e(t),body,links,i;if(l.indexOf("nosql.mypopescu.com")>0||l.indexOf("mynosql.tv")>0){var%20lres=entry.getElementsByClassName("linksrc");if(lres.length>0){wl=wl+"&l="+e(lres[0].getElementsByTagName("a")[0].href)};body=d.getElementsByClassName("entry_body")[0]}else{body=d.body};links=body.getElementsByTagName("a");for(i=0;i<links.length;i++){if(links[i].href)wl=wl+"&l="+e(links[i].href)};try{window.console.log(wl);}catch(e){};if(!w.open(wl))window.location.href=wl})();        Save links from page to BrainArch
 
