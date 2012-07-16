@@ -58,11 +58,14 @@ r           http://ahrefs.appspot.com/r?u=%r&t=%t               My Readability.p
 ri          http://www.instapaper.com/m?u=%r                    Instapaper mobilizer
 @@ir        ri
 h2m         http://twimblr.appspot.com/h2m?u=%r&t=%t            html2markdown
-markdown    http://www.aaronsw.com/2002/html2text/?url=%r		Transform this page into Markdown
-@@md        h2m
+2text       http://www.aaronsw.com/2002/html2text/?url=%r		Transform this page into Markdown
+@@2txt      2text
+md 		      javascript:location.href='http://heckyesmarkdown.com/go/?read=1&preview=0&showframe=0&u='+encodeURIComponent(document.location.href);		Get Raw Markdown for page
+mdp		      javascript:location.href='http://heckyesmarkdown.com/go/?read=1&preview=0&showframe=1&u='+encodeURIComponent(document.location.href);		Get Markdown Preview for page
 @@mk        h2m
 @@mkd       h2m
 @@mkdn      h2m
+clipr 	    javascript:(function(e,a,g,h,f,c,b,d)%20{if(!(f=e.jQuery)||g>f.fn.jquery||h(f))%20{c=a.createElement("script");c.type="text/javascript";c.src="http://ajax.googleapis.com/ajax/libs/jquery/"+g+"/jquery.min.js";c.onload=c.onreadystatechange=function()%20{if(!b&&(!(d=this.readyState)||d=="loaded"||d=="complete"))%20{h((f=e.jQuery).noConflict(1),b=1);f(c).remove()}};a.documentElement.childNodes[0].appendChild(c)}})(window,document,"1.4.2",function($,L)%20{$(document).ready(function()%20{$("iframe,object,embed,input[type=image],ins").hide();$("div,table").live("mouseover%20mouseout%20click",function(a)%20{a.type=="mouseover"?$(this).css({border:"1px%20solid%20red"}):$("div,table").css({border:"none"});if(a.type=="click")%20{$("link[type='text/css'],link[rel='stylesheet'],script,style,noscript").remove();$("body").empty();$(this).appendTo("body");a=$("title").text();$("head").empty();$("head").append("<title>"+a+"</title>");$("head").append('<style%20type="text/css">@media%20print{div,table{width:100%%20!important;font-family:Garamond,"Times%20New%20Roman",serif%20!important;font-size:12pt%20!important;}}</style>');$(this).append("<hr><b>From%20The%20Web%20Page</b>:%20<i>"+a+"</i>");$(this).css({font:"21px/1.618%20Georgia,%20serif",color:"#111",width:"62%",margin:"5px%20auto"});$("a%20img").css({border:"0"});$("p").css({margin:"0.618em%200"});$("h1,h2,h3,br").css({"line-height":"1.3"});$("body").css({"background-color":"#f9f9f9"});$("div,table").die("mouseover%20mouseout%20click")}%20return%20false})});}); 	Clipr
 print       javascript:(function(){if(window['ppw']&&ppw['bookmarklet']){ppw.bookmarklet.toggle();}else{window._pwyl_home='http://www.printwhatyoulike.com/';window._pwyl_pro_id=12942;window._pwyl_bmkl=document.createElement('script');window._pwyl_bmkl.setAttribute('type','text/javascript');window._pwyl_bmkl.setAttribute('src',window._pwyl_home+'static/compressed/pwyl_bookmarklet_10.js');window._pwyl_bmkl.setAttribute('pwyl','true');document.getElementsByTagName('head')[0].appendChild(window._pwyl_bmkl);}})();      Print with <a href="http://www.printwhatyoulike.com/">PrintWhatYouLike</a>
 > rd          http://ahrefs.appspot.com/r2?u=%r&t=%t              My Readability w/ Diffbot
 
@@ -139,7 +142,7 @@ boxee       javascript:var%20b=document.body;if(b&&!document.xmlVersion){void(z=
 
 ba          javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f="x-brainarch://url?",p="u="+enc(w.location.href)+"&t="+enc(d.title)+"&s="+enc(s),u=f+p;if(!w.open(u))l.href=u;void(0)      Save page to BrainArch
 baz         javascript:var%20enc=encodeURIComponent,w=window,d=document,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),q=w.location.href,p=d.title,u='http://friendfeedredux.appspot.com/ba/brainarch.html?u='+enc(q)+'&d='+enc(s)+'&t='+enc(p);if(!w.open(u,'BrainArch','toolbar=no,width=700,height=960')){w.location.href=u}void(0)        Add to BrainArch
-myquix      javascript:alert('myQuix%20version:v.2012.05.25-11:15');void(0)              Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2012.07.15-21:45');void(0)              Display my Quix settings version
 
 bal         javascript:(function(){var%20e=encodeURIComponent,w=window,d=document,l=w.location.href,t=d.title,wl="x-brainarch://links?u="+e(l)+"&t="+e(t),body,links,i;if(l.indexOf("nosql.mypopescu.com")>0||l.indexOf("mynosql.tv")>0){var%20lres=entry.getElementsByClassName("linksrc");if(lres.length>0){wl=wl+"&l="+e(lres[0].getElementsByTagName("a")[0].href)};body=d.getElementsByClassName("entry_body")[0]}else{body=d.body};links=body.getElementsByTagName("a");for(i=0;i<links.length;i++){if(links[i].href)wl=wl+"&l="+e(links[i].href)};try{window.console.log(wl);}catch(e){};if(!w.open(wl))window.location.href=wl})();        Save links from page to BrainArch
 
