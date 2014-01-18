@@ -34,8 +34,7 @@ pinr        http://pinreadr.appspot.com/        Go to Pinreadr
 pinb 		https://pinboard.in/u:alexp			Go to <a href="https://pinboard.in">Pinboard</a>
 times       http://timdd.com                    International Time Zones
 paint       http://pixlr.com/editor/            <a href="http://pixlr.com">Pixlr</a> online image editor
-@@myp       pinr
-
+vv			javascript:alert("v1.0")			Display current version of the Quix
 
 @Twitter commands
 
