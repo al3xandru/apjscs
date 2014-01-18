@@ -11,7 +11,7 @@
 
 @Aliases
 @These are redefinitions of the default commands
-*               http://www.google.com/search?q=%s							Google Search
+*               http://www.google.com/search?q=%s	Google Search
 @@def           d
 @@email         e
 @@images        img
@@ -21,38 +21,45 @@
 @@ev			evernote
 
 @Dictionaries
-dict            http://dictionary.reference.com/browse/%s                           Dictionary.com
-tr              http://translate.google.com?sl=ro&tl=en&text=%s                     Translate with Google Translate
-trp             http://translate.google.com/translate?u=%r&tl=%s					Translate the current page
+dict            http://dictionary.reference.com/browse/%s			Dictionary.com
+tr              http://translate.google.com?sl=ro&tl=en&text=%s     Translate with Google Translate
+trp             http://translate.google.com/translate?u=%r&tl=%s	Translate the current page
 
 @Version
-myquix      javascript:alert('myQuix%20version:v.2014.01.17-19:50');void(0)              Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2014.01.17-21:00');void(0) 	Display my Quix settings version
 @@vv		myquix
 
 
 @Links
-twimblr		http://twimblr.appspot.com/         Go to Twimblr Toolkit
-myn			http://nosql.mypopescu.com/         Go to <a href="http://mynosql.org">myNoSQL</a>
-myj			http://jots.mypopescu.com/          Go to <a href="http://jots.mypopescu.com">jots.mypopescu.com</a>
-pinr        http://pinreadr.appspot.com/        Go to Pinreadr
-pinb 		https://pinboard.in/u:alexp			Go to <a href="https://pinboard.in">Pinboard</a>
-times       http://timdd.com                    International Time Zones
-paint       http://pixlr.com/editor/            <a href="http://pixlr.com">Pixlr</a> online image editor
+twimblr		http://twimblr.appspot.com/ 	Go to Twimblr Toolkit
+myn			http://nosql.mypopescu.com/ 	Go to <a href="http://mynosql.org">myNoSQL</a>
+myj			http://jots.mypopescu.com/      Go to <a href="http://jots.mypopescu.com">jots.mypopescu.com</a>
+pinr        http://pinreadr.appspot.com/    Go to Pinreadr
+pinb 		https://pinboard.in/u:alexp		Go to <a href="https://pinboard.in">Pinboard</a>
+times       http://timdd.com                International Time Zones
+paint       http://pixlr.com/editor/        <a href="http://pixlr.com">Pixlr</a> online image editor
 
 
 @iOS Twitter commands
-tta         tweetbot://al3xandru/post?text=%t%20%r		Tweet current page with Tweetbot
-ttb			twitterrific:///post?message=%t%20%r		Tweet current page with Twitterrific
-ttc			twitter://post?message=%t%20%r              Tweet current page with Twitter
+tta         tweetbot://al3xandru/post?text=%t%20%r 	Tweet current page with Tweetbot
+ttb			twitterrific:///post?message=%t%20%r	Tweet current page with Twitterrific
+ttc			twitter://post?message=%t%20%r          Tweet current page with Twitter
 
 @iOS bookmarks
-pwd         javascript:window.location.href="onepassword://"+encodeURI(window.location.href)            1Password
-yummy       javascript:window.location.href="yummy://post?url="+encodeURIComponent(window.location.href)+"&title="+encodeURIComponent(document.title)           Add bookmark to Yummy
-wkc         javascript:window.location.href="writingkit://add?content={clipboard}"    												Clipboard to WritingKit
+pwd         onepassword://%r 	1Password
+yummy       yummy://post?url=%r&title=%t 	Add bookmark to Yummy
+wkc         writingkit://add?content={clipboard} 	Clipboard to WritingKit
 wks         javascript:window.location.href="writingkit://add?filename="+document.title+"&content="+escape(window.getSelection())   Selection to WritingKit
-bwc         javascript:window.location.href="byword://new?text={clipboard}"        																													 Clipboard to Byword
+bwc         byword://new?text={clipboard} 	Clipboard to Byword
 bws         javascript:window.location.href="byword://new?text="+encodeURIComponent(document.title)+'\n'+encodeURIComponent(window.location.href)+'\n\n'+encodeURIComponent(window.getSelection())   Selection to Byword
-
+ed			editorial://?command=Open%20in%20Browser&input=%r 	Open in Editorial
+drtl 		drafts://x-callback-url/create?text=%5B%t%5D(%r)	[Title](url) in Draft
+@@drtu		drtl
+drc			drafts://x-callback-url/create?text=%t%5Cn%r&action=DraftNClipboard 	Page and CLipboard in Draft
+drbq 		pythonista://DraftsQuote?action=run&argv=%r&argv=%t						Quote in Draft
+jour        javascript:window.location='drafts://x-callback-url/create?text='+encodeURIComponent('%5B'+document.title+'%5D('+location.href+')')+'&action=Append%20to%20Journal&afterSuccess=Delete&x-success='+window.location.href 	Journalize
+jourc       javascript:window.location='drafts://x-callback-url/create?text='+encodeURIComponent('From:%20%5B'+document.title+'%5D('+location.href+')')+'&action=Journal%20with%20clipboard&afterSuccess=Delete&x-success='+window.location.href 	Journalize with clipboard
+journ 	 	javascript:window.location='drafts://x-callback-url/create?text='+encodeURIComponent('From:%20%5B'+document.title+'%5D('+location.href+')')+'&action=nvALT%20with%20clipboard&afterSuccess=Delete&x-success='+window.location.href 		Send to nvALT with clipboard
 
 @Twitter commands
 t               javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='https://twitter.com/share?',dt=new%20Date(),p='url='+enc(d.location.href)+'&text='+enc(d.title+':%20'+s)+'&_='+dt.getTime(),u=f+p;if(!w.open(u))w.location.href=u;        Tweet with selection
