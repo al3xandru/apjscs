@@ -19,9 +19,23 @@
 @@y             yt
 @@headers       h
 
+
+@Dictionaries
 dict            http://dictionary.reference.com/browse/%s                           Dictionary.com
 tr              http://translate.google.com?sl=ro&tl=en&text=%s                     Translate with Google Translate
 trp             http://translate.google.com/translate?u=%r&tl=%s					Translate the current page
+
+
+@Links
+twimblr     http://twimblr.appspot.com/         Go to Twimblr Toolkit
+myn         http://nosql.mypopescu.com/         Go to <a href="http://mynosql.org">myNoSQL</a>
+myj         http://jots.mypopescu.com/          Go to <a href="http://jots.mypopescu.com">jots.mypopescu.com</a>
+pinr        http://pinreadr.appspot.com/        Go to Pinreadr
+pinb 		https://pinboard.in/u:alexp			Go to <a href="https://pinboard.in">Pinboard</a>
+times       http://timdd.com                    International Time Zones
+paint       http://pixlr.com/editor/            <a href="http://pixlr.com">Pixlr</a> online image editor
+@@myp       pinr
+
 
 @Twitter commands
 
@@ -29,6 +43,8 @@ t               javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.
 tt              javascript:(function(){window.twttr=window.twttr||{};var%20D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/bookmarklets/share.js?v=1';F.getElementsByTagName('head')[0].appendChild(E)})();        Original Twitter bookmarklet
 tf              https://twitter.com/#!/favorites            Twitter favorites
 tl              https://twitter.com/#!/al3xandru/%s         Twitter list "name"
+tla				https://twitter.com/al3xandru/a-mac-apps	Twitter "Mac" list
+tlb				https://twitter.com/al3xandru/b-qr			Twitter "Quick read" list			
 tm              twitter://post?message=%s%20%t%20%r         Tweet with Twitter for Mac
 tu              http://twitter.com/%s                       Twitter user
 
@@ -39,20 +55,21 @@ tu              http://twitter.com/%s                       Twitter user
 
 tlater          javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='http://twitlatr.appspot.com/',l=d.location,p='?v=1&u='+enc(l.href)+'&t='+enc(d.title)+'&s='+enc(s),u=f+p,a=function(){if(!w.open(u))l.href=u};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();void(0)        Schedule Tweet
 @@tweetlater    tlater
+@@twl			tlater
 
 
 @iOS Twitter commands
 tta         javascript:window.location.href="tweetbot://al3xandru/post?text="+escape(document.title)+"%20"+encodeURI(window.location.href)                Tweet current page with Tweetbot
-ttb         javascript:window.location.href="tweetie:"+escape(document.title)+"%20"+encodeURI(window.location.href)                                       Tweet current page with Tweetie
-wkc         javascript:window.location.href="writingkit://add?content={clipboard}"    Clipboard to WritingKit
-wks         javascript:window.location.href="writingkit://add?filename="+document.title+"&content="+escape(window.getSelection())   Selection to WritingKit
-bwc         javascript:window.location.href="byword://new?text={clipboard}"        Clipboard to Byword
-bws         javascript:window.location.href="byword://new?text="+encodeURIComponent(document.title)+'\n'+encodeURIComponent(window.location.href)+'\n\n'+encodeURIComponent(window.getSelection())   Selection to Byword
-
+ttb			twitterrific:///post?message=%t%20%r																										  Tweet with Twitterrific         
+ttc			javascript:window.location.href="tweetie:"+escape(document.title)+"%20"+encodeURI(window.location.href)                                       Tweet current page with Tweetie
 
 @Mobile bookmarks
 pwd         javascript:window.location.href="onepassword://"+encodeURI(window.location.href)            1Password
 yummy       javascript:window.location.href="yummy://post?url="+encodeURIComponent(window.location.href)+"&title="+encodeURIComponent(document.title)           Add bookmark to Yummy
+wkc         javascript:window.location.href="writingkit://add?content={clipboard}"    												Clipboard to WritingKit
+wks         javascript:window.location.href="writingkit://add?filename="+document.title+"&content="+escape(window.getSelection())   Selection to WritingKit
+bwc         javascript:window.location.href="byword://new?text={clipboard}"        																													 Clipboard to Byword
+bws         javascript:window.location.href="byword://new?text="+encodeURIComponent(document.title)+'\n'+encodeURIComponent(window.location.href)+'\n\n'+encodeURIComponent(window.getSelection())   Selection to Byword
 
 
 @Readability
@@ -75,16 +92,6 @@ print       javascript:(function(){if(window['ppw']&&ppw['bookmarklet']){ppw.boo
 rdh         http://www.diffbot.com/api/article?token=9b282e50efed5cec84d3cfc3e2486d94&html=1&url=%r               Diffbot as HTML
 rdt         http://www.diffbot.com/api/article?token=9b282e50efed5cec84d3cfc3e2486d94&html=1&url=%r               Diffbot as text
 
-@Shortcuts
-twimblr     http://twimblr.appspot.com/         Go to Twimblr Toolkit
-myn         http://nosql.mypopescu.com/         Go to myNoSQL
-myj         http://jots.mypopescu.com/          Go to jots.mypopescu.com
-pinr        http://pinreadr.appspot.com/        Go to Pinreadr
-@@myp       pinr
-gr          http://www.google.com/reader        Go to Google Reader
-times       http://timdd.com                    International Time Zones
-workflowy   http://www.workflowy.com/           Workflowy
-paint       http://pixlr.com/editor/            <a href="http://pixlr.com">Pixlr</a> online image editor
 
 
 @EagleFiler
@@ -105,19 +112,16 @@ togb        javascript:location.href='x-together://AddItem?kind=Bookmark&name='+
 togp        javascript:location.href='x-together://AddItem?kind=WebPDF&name='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location);           Archive as PDF in Together
 
 @My commands
+jmp         javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),s2=((s.toString()=='')?s:('%22'+enc(s)+'%22')),f='http://j.mp/',l=d.location,p='?v=3&u='+enc(l.href)%20+'&s='+enc(d.title)+'%20'+s2,u=f+p;try{if(!/^(.*\.)?tumblrzzz[^.]*$/.test(l.host))throw(0);tstbklt();}catch(z){a=function(){if(!w.open(u))l.href=u;};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();}void(0)          Short with j.mp
 
-jmp         javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),s2=((s.toString()=='')?s:('%22'+enc(s)+'%22')),f='http://j.mp/',l=d.location,p='?v=3&u='+enc(l.href)%20+'&s='+enc(d.title)+'%20'+s2,u=f+p;try{if(!/^(.*\.)?tumblrzzz[^.]*$/.test(l.host))throw(0);tstbklt();}catch(z){a=function(){if(!w.open(u))l.href=u;};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();}void(0)          Shorted with j.mp
+pin         javascript:var%20enc=encodeURIComponent,w=window,d=document,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),q=w.location.href,p=d.title,u='https://pinboard.in/add?showtags=yes&next=same&url='+enc(q)+'&description='+enc(s)+'&title='+enc(p);if(!w.open(u,'Pinboard','toolbar=no,width=700,height=750')){w.location.href=u}void(0)        Bookmark on Pinboard
 
-pin         javascript:var%20enc=encodeURIComponent,w=window,d=document,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),q=w.location.href,p=d.title,u='https://pinboard.in/add?showtags=yes&next=same&url='+enc(q)+'&description='+enc(s)+'&title='+enc(p);if(!w.open(u,'Pinboard','toolbar=no,width=700,height=750')){w.location.href=u}void(0)        Bookmark on Pinboard  
-
-pocket      javascript:(function(){ISRIL_H='a123';PKT_D='getpocket.com';ISRIL_SCRIPT=document.createElement('SCRIPT');ISRIL_SCRIPT.type='text/javascript';ISRIL_SCRIPT.src='http://'+PKT_D+'/b/r.js';document.getElementsByTagName('head')[0].appendChild(ISRIL_SCRIPT)})();      Bookmark on Pocket (ex-ReadItLater)
+pocket      javascript:(function(){ISRIL_H='a123';PKT_D='getpocket.com';ISRIL_SCRIPT=document.createElement('SCRIPT');ISRIL_SCRIPT.type='text/javascript';ISRIL_SCRIPT.src='http://'+PKT_D+'/b/r.js';document.getElementsByTagName('head')[0].appendChild(ISRIL_SCRIPT)})();      Bookmark on Pocket
+poco		javascript:window.location.href='https://getpocket.com/edit?url='+encodeURI(window.location.href)+'&title='+encodeURIComponent(document.title)	Old Pocket direct add
 @@poc       pocket
 @@ril       pocket         
 
-i           javascript:function%20iprl5(){var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);d.title='(Saving...)%20'+d.title;z.setAttribute('src','http://www.instapaper.com/j/ZG1C50lHfgb4?u='+encodeURIComponent(d.location.href)+'&t='+(new%20Date().getTime()));b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)        Bookmark on Instapaper
-@@insta     i
-@@ins       i
-iv          javascript:function%20iprl5(){var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body,l=d.location;try{if(!b)throw(0);d.title='(Saving...)%20'+d.title;z.setAttribute('src',l.protocol+'//www.instapaper.com/j/ZG1C50lHfgb4?f=1571513&u='+encodeURIComponent(l.href)+'&t='+(new%20Date().getTime()));b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)      Bookmark video to Instapaper
+insta       javascript:function%20iprl5(){var%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try{if(!b)throw(0);d.title='(Saving...)%20'+d.title;z.setAttribute('src','http://www.instapaper.com/j/ZG1C50lHfgb4?u='+encodeURIComponent(d.location.href)+'&t='+(new%20Date().getTime()));b.appendChild(z);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iprl5();void(0)        Bookmark on Instapaper
 
 readlater   javascript:((function(){window.baseUrl='http://www.readability.com';window.readabilityToken='DRFjQrS3JxY239a87Be7rHD2BbfjWbWmErujqzrd';var%20s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('charset','UTF-8');s.setAttribute('src',baseUrl+'/bookmarklet/save.js');document.documentElement.appendChild(s);})())       Bookmark on Readability.com
 @@rl        readlater
