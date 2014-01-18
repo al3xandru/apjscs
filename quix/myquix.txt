@@ -26,7 +26,7 @@ tr              http://translate.google.com?sl=ro&tl=en&text=%s     Translate wi
 trp             http://translate.google.com/translate?u=%r&tl=%s	Translate the current page
 
 @Version
-myquix      javascript:alert('myQuix%20version:v.2014.01.17-21:16');void(0) 	Display my Quix settings version
+myquix      javascript:alert('myQuix%20version:v.2014.01.17-21:22');void(0) 	Display my Quix settings version
 @@vv		myquix
 
 
@@ -48,10 +48,6 @@ ttc			twitter://post?message=%t%20%r          Tweet current page with Twitter
 @iOS bookmarks
 pwd         onepassword://%r 	1Password
 yum       	yummy://post?url=%r&title=%t 	Add bookmark to Yummy
-wkc         writingkit://add?content={clipboard}%0A%5B%t%5D(%r) 	Clipboard to WritingKit
-wks         javascript:window.location.href="writingkit://add?filename="+document.title+"&content="+escape(window.getSelection())   Selection to WritingKit
-bwc         byword://new?text={clipboard}%0A%5B%t%5D(%r) 	Clipboard to Byword
-bws         javascript:window.location.href="byword://new?text="+encodeURIComponent(document.title)+'%0A'+encodeURIComponent(window.location.href)+'%0A%0A'+encodeURIComponent(window.getSelection())   Selection to Byword
 ed			editorial://?command=Open%20in%20Browser&input=%r 	Open in Editorial
 dr 			drafts://x-callback-url/create?text=%5B%t%5D(%r)	[Title](url) in Draft
 drc			drafts://x-callback-url/create?text=%t%0A%r&action=DraftNClipboard 	Page and CLipboard in Draft
@@ -59,6 +55,11 @@ drb 		pythonista://DraftsQuote?action=run&argv=%r&argv=%t						Quote in Draft
 jr        	javascript:window.location='drafts://x-callback-url/create?text='+encodeURIComponent('['+document.title+']('+location.href+')')+'&action=Append%20to%20Journal&afterSuccess=Delete&x-success='+window.location.href 	Journalize
 jrc       	javascript:window.location='drafts://x-callback-url/create?text='+encodeURIComponent('From:%20['+document.title+']('+location.href+')')+'&action=Journal%20with%20clipboard&afterSuccess=Delete&x-success='+window.location.href 	Journalize with clipboard
 jrn 	 	javascript:window.location='drafts://x-callback-url/create?text='+encodeURIComponent('From:%20['+document.title+']('+location.href+')')+'&action=nvALT%20with%20clipboard&afterSuccess=Delete&x-success='+window.location.href 		Send to nvALT with clipboard
+wkc         writingkit://add?content=%5B%t%5D(%r)%0A%0A{clipboard} 	Clipboard to WritingKit
+wks         javascript:window.location.href="writingkit://add?filename="+document.title+"&content="+escape(window.getSelection())   Selection to WritingKit
+bwc         byword://new?text={clipboard} 	Clipboard to Byword
+bws         javascript:window.location.href="byword://new?text="+encodeURIComponent(document.title)+'%0A'+encodeURIComponent(window.location.href)+'%0A%0A'+encodeURIComponent(window.getSelection())   Selection to Byword
+
 
 @Twitter commands
 t               javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='https://twitter.com/share?',dt=new%20Date(),p='url='+enc(d.location.href)+'&text='+enc(d.title+':%20'+s)+'&_='+dt.getTime(),u=f+p;if(!w.open(u))w.location.href=u;        Tweet with selection
