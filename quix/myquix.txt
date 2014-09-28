@@ -64,12 +64,12 @@ bws         javascript:window.location.href="byword://new?text="+encodeURICompon
 @Twitter commands
 t               javascript:var%20d=document,w=window,enc=encodeURIComponent,e=w.getSelection,k=d.getSelection,x=d.selection,s=(e?e():(k)?k():(x?x.createRange().text:0)),f='https://twitter.com/share?',dt=new%20Date(),p='url='+enc(d.location.href)+'&text='+enc(d.title+':%20'+s)+'&_='+dt.getTime(),u=f+p;if(!w.open(u))w.location.href=u;        Tweet with selection
 tt              javascript:(function(){window.twttr=window.twttr||{};var%20D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/bookmarklets/share.js?v=1';F.getElementsByTagName('head')[0].appendChild(E)})();        Original Twitter bookmarklet
-tf              https://twitter.com/#!/favorites            Twitter favorites
-tl              https://twitter.com/#!/al3xandru/%s         Twitter list "name"
-tla				https://twitter.com/al3xandru/a-mac-apps	Twitter "Mac" list
-tlb				https://twitter.com/al3xandru/b-qr			Twitter "Quick read" list			
-tm              twitter://post?message=%s%20%t%20%r         Tweet with Twitter for Mac
-tu              http://twitter.com/%s                       Twitter user
+tf              https://twitter.com/al3xandru/favorites                  Twitter favorites
+tl              https://twitter.com/al3xandru/lists/%s         Twitter list "name"
+tla			  https://twitter.com/al3xandru/lists/a-mac-apps	    Twitter "Mac" list
+tlb			  https://twitter.com/al3xandru/lists/b-qr		    Twitter "Quick read" list			
+tm              twitter://post?message=%s%20%t%20%r               Tweet with Twitter for Mac
+tu              http://twitter.com/%s                             Twitter user
 
 @@twits         s
 @@ts            s
